@@ -1,18 +1,14 @@
-# L6_L7_10 — Bus Transit Fare
+# Lab 6: Code Coverage
 
-Lab 6: Code and Branch Coverage
+Nishanth Nag M V | PES1UG24AM381
 
-## About
+The code coverage suite passes 7 tests and executes all 57 application statements (100%). The original application and starter test are unchanged.
 
-A small Python module that calculates bus transit fares by route type, zone traversals, and passenger concession categories, and checks contactless smartcard turnstile failure rates.
+```sh
+python -m pip install -r requirements.txt
+python run_coverage.py code
+```
 
-## Files
+![Code coverage result](screenshots/code_coverage.jpg)
 
-| File | Description |
-|------|-------------|
-| `bus_transit_fare.py` | The module under test |
-| `test_bus_transit.py` | Starter test file |
-
-Keep all your Lab 6 work in this `LAB6` folder. Lab 7 will be added to this repo later.
-
-Refer to the lab handout for instructions.
+Baseline and improved text/JSON reports are in reports/. Branch coverage is the next submission stage.
