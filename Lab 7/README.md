@@ -1,18 +1,12 @@
-# L6_L7_10 — Bus Transit Fare
+# Lab 7: Reproduce input validation failures
 
-Lab 7: Fuzz Testing with Hypothesis
+Nishanth Nag M V | PES1UG24AM381
 
-## About
+The original processor.py is retained in this commit. Completed Hypothesis properties reveal three failing no-crash tests. Raw original outputs and terminal-style images are in evidence/.
 
-A set of property-based fuzz tests targeting transit corridor codes, passenger concession categories, and route passenger density ratios to find unexpected crashes.
+```sh
+python -m pip install -r requirements.txt
+python -m pytest test_processor.py -q --tb=no -k "no_crash or safe"
+```
 
-## Files
-
-| File | Description |
-|------|-------------|
-| `processor.py` | The module under test (buggy starter code) |
-| `test_processor.py` | Starter test file to complete using Hypothesis |
-
-Keep all your Lab 7 work in this `LAB7` folder.
-
-Refer to the lab handout for instructions.
+Expected result: 3 failed, 71 deselected. This is the pre-fix stage; the next commit hardens the application and adds passing evidence.
